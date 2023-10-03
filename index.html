@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fractal Generator</title>
+  <style>
+    button{
+      padding:1%;
+    }
+    #buttondiv{
+      display: flex;
+      justify-content: space-between;
+    }
+     /* CSS for the hamburger menu */
+     #hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+    #hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+    #menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+  </style>
+</head>
+
+<body>
+<script src="p5.min.js"></script>
+<script src="sketch.js"></script>
+<div id="buttondiv">
+<button onclick="add()" id="plus"> + </button>
+  <!-- Hamburger icon -->
+  <div id="hamburger-icon">&#9776;</div>
+
+  <!-- Hamburger menu -->
+  <div id="menu">
+    <h2>Menu</h2>
+    <label for="variable1">Width:</label>
+    <span id="current-variable1">0</span>
+    <input type="number" id="variable1" value="0"><br>
+
+    <label for="variable2">Height:</label>
+    <span id="current-variable2">0</span>
+    <input type="number" id="variable2" value="0"><br>
+
+    <label for="variable3">Number:</label>
+    <span id="current-variable3">0</span>
+    <input type="number" id="variable3" value="0"><br>
+
+    <button onclick="updateVariables()">Update</button>
+</div>
+<button onclick="minus()"> - </button></div>
+</body>
+
+</html>
