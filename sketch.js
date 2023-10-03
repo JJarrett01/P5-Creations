@@ -12,6 +12,7 @@ var minNum = 80;
 var mindim = Math.min(cwidth, cheight);
 var maxLevel = Math.round(Math.random()*(maxNum-minNum))+minNum;
 var eheight = mindim*0.27;
+var el = false;
 console.log(eheight);
 var ewidth = eheight;
 var drawn =false;
@@ -37,7 +38,11 @@ function draw(){
   translate(cwidth/2, cheight/2);
   if(!drawn){
   for(var level = 0; level < maxLevel; level++){
+  if(!el){
   rect(50, 50, ewidth, eheight);
+  }else{
+    ellipse(50, 50, ewidth, eheight);
+  }
   rotate(100*Math.PI/maxLevel);
   var x = Math.exp(Math.log(0.01)/maxLevel)
   scale(x);
@@ -76,6 +81,8 @@ function updateVariables() {
  document.getElementById('current-variable1').textContent = parseInt(ewidth);
   document.getElementById('current-variable2').textContent = parseInt(eheight);
   document.getElementById('current-variable3').textContent = parseInt(maxLevel);
+  el = document.getElementById('round-corners').checked;
+
 }
 function updateMenu(){
 document.getElementById('current-variable1').textContent = parseInt(ewidth);
@@ -84,4 +91,6 @@ document.getElementById('current-variable3').textContent = parseInt(maxLevel);
 document.getElementById('variable1').value = parseInt(ewidth);
 document.getElementById('variable2').value =  parseInt(eheight);
 document.getElementById('variable3').value = parseInt(maxLevel);
+document.getElementById('round-corners').checked = el;
+
 }
