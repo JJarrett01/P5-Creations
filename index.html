@@ -38,6 +38,7 @@
 
 <body>
 <script src="p5.min.js"></script>
+<script src="https://unpkg.com/p5.js-svg@1.5.1"></script>
 <script src="sketch.js"></script>
 <div id="buttondiv">
 <button onclick="add()" id="plus"> + </button>
@@ -58,6 +59,11 @@
     <label for="variable3">Number:</label>
     <span id="current-variable3">0</span>
     <input type="number" id="variable3" value="0"><br>
+
+    <label for="variable4">Spacing:</label>
+    <span id="current-variable4">0</span>
+    <input type="number" id="variable4" value="0"><br><br>
+
     <label for="round-corners">Round Corners:</label>
     <input type="checkbox" id="round-corners"><br><br>
     <button onclick="updateVariables()">Update</button>
