@@ -9,10 +9,10 @@ function setup(){
 
 var maxNum = 1000;
 var minNum = 80;
-var space = 50;
+var space = 90;
 var mindim = Math.min(cwidth, cheight);
 var maxLevel = Math.round(Math.random()*(maxNum-minNum))+minNum;
-var eheight = mindim*0.27;
+var eheight = mindim*0.25;
 var el = false;
 console.log(eheight);
 var ewidth = eheight;
