@@ -8,7 +8,7 @@ function setup(){
 }
 
 var maxNum = 1000;
-var minNum = 80;
+var minNum = 119;
 var space = 90;
 var mindim = Math.min(cwidth, cheight);
 var maxLevel = Math.round(Math.random()*(maxNum-minNum))+minNum;
